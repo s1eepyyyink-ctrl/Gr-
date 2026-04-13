@@ -115,13 +115,13 @@ jobs:
           pkg.version=process.env.VERSION;\
           pkg.author=process.env.AUTHOR;\
           fs.writeFileSync('./app/package.json',JSON.stringify(pkg,undefined,'\t'));"
-          
+  
       - name: Install tawb
         run: npm install -g tawb
-        
+
       - name: Build with tawb
         run: tawb build --name "Gr夺了" --description "我不知道你们为什么讨厌gr，他们明明没有抢过任何人冠军"
-        
+
       - name: Build the app
         working-directory: ./app
         env:
