@@ -9,10 +9,10 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           
@@ -25,7 +25,7 @@ jobs:
           electron-packager . --platform=win32 --arch=x64 --out=dist
           
       - name: Upload EXE
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: game-exe
           path: dist/**/*.exe
